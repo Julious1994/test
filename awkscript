@@ -1,0 +1,17 @@
+BEGIN {sum=0
+len=0
+OFS=":"
+}
+{
+	if($0 != "")
+	{
+		print toupper($0)
+		len=len+length($0)
+		sum=sum+1
+		print len
+	}
+}
+END {print sum
+print "Length"
+print len
+}
